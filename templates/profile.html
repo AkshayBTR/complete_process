@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+  <title>{{user.username}}</title>
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+   <div class="jumbotron">
+        <img src="{{ profile.profile_pic.url}}" alt="No Profile Pic" width="100" height="100">
+        <h3>Username : </h3>{{user.username}}
+        <h3>Email : </h3>{{user.email}}
+        <h3>Address </h3>: {{profile.address}}
+    </div>
+  </div>
+  
+{% endblock %}
